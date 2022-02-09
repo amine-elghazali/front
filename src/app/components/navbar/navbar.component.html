@@ -1,0 +1,13 @@
+<div class="navbar mb-2 fixed w-full shadow-md " >
+    <div class="px-2 mx-2 navbar-start ml-8">
+        <span class="text-lg font-bold text-black cursor-pointer" routerLink='/home' >WildBets</span>
+    </div>
+    <div class="hidden px-2 mx-2 navbar-center lg:flex ml-8">
+        <div class="flex items-stretch">
+            <app-navbar-item [routeName]="'Home'" routerLink='/home'> </app-navbar-item>
+            <app-navbar-item [routeName]="'Explore'" routerLink='/betting'> </app-navbar-item>
+            <app-navbar-item [routeName]="'FAQ'" routerLink='/aboutus'> </app-navbar-item>
+            <app-navbar-item class="ml-4 rounded-lg border-2" (click)= "openMetaMask()" [routeName]="'Connect Wallet'"> </app-navbar-item>
+        </div>
+    </div>
+</div>

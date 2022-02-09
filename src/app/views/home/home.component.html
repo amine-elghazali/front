@@ -1,0 +1,19 @@
+  
+    <app-navbar > </app-navbar>
+  
+  <div class="bg-green-700 h-screen px-5">
+      <app-top> </app-top>
+  </div>
+
+  <div class="bg-gray-50 px-20 py-10">
+      <div class="text-center grid sm:mb-5 sm:grid-cols-1 md:grid-cols-3 w-full px-24">
+          <app-feature class="mx-5" *ngFor="let feature of features" [image]='feature.image' [title]='feature.title' [text]='feature.text'>
+          </app-feature>
+      </div>
+  </div>
+
+  <div class="bg-white px-10 py-10 w-full">
+      <app-aboutus *ngFor="let about of aboutUs" [image]='about.image' [title]='about.title' [text]='about.text' [reversed]='about.reversed'>
+      </app-aboutus>
+
+  </div>
