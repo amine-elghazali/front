@@ -16,7 +16,6 @@ export class PlaceBetComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.web3Service.loginmsk()
   }
 
   @Input() teamName?:string;

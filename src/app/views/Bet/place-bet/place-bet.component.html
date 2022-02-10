@@ -1,3 +1,4 @@
-<div class="cursor-pointer grid grid-cols-1 content-around block p-6 h-6 bg-green-50 rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-  <div (click)="placeBet(teamName!)" class="text-green-600 text-center font-extrabold ">{{teamName}}</div>
-</div>
+<button class="btn btn-primary">
+  <button (click)="placeBet(teamName!)" class="text-green-600 text-center font-extrabold ">{{teamName}}</button>
+  <button *ngIf="isDraw" (click)="placeBet(teamName!)" class="text-green-600 text-center font-extrabold ">DRAW</button>
+</button>
