@@ -13,12 +13,12 @@ export class Web3Service {
 
   constructor() { }
 
-  private account: any = null;
-  private web3: any;
-  
-  private web3Provider:any;
+  public account: any = null;
+  public web3: any;
 
-  
+  public web3Provider:any;
+
+
   async loginmsk(){
     if (typeof window.ethereum !== 'undefined') {
       this.web3Provider = window.web3.currentProvider

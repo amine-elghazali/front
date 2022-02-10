@@ -20,10 +20,13 @@
     "@angular/router": "~13.0.0",
     "@metamask/detect-provider": "^1.2.0",
     "@truffle/contract": "^4.4.7",
+    "@walletconnect/web3-provider": "^1.7.1",
     "assert": "^2.0.0",
     "autoprefixer": "^10.4.2",
+    "crypto": "^1.0.1",
     "crypto-browserify": "^3.12.0",
     "daisyui": "^1.25.4",
+    "eventemitter3": "^4.0.7",
     "https-browserify": "^1.0.0",
     "jquery": "^3.6.0",
     "os-browserify": "^0.3.0",
@@ -55,5 +58,8 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "tailwindcss": "^2.2.19",
     "typescript": "~4.4.3"
+  },
+  "browser": {
+    "crypto": false
   }
 }

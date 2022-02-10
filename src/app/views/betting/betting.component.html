@@ -6,40 +6,40 @@
       <h2 class="text-center text-2xl font-bold mt-4 text-white" >Place Your Bets by clicking on the team</h2>
 
       <div class="flex justify-center">
-        <select [(ngModel)]="RoundId" name="RoundId" (ngModelChange)="search(RoundId)" 
+        <select [(ngModel)]="RoundId" name="RoundId" (ngModelChange)="search(RoundId)"
         class="w-64 mt-4 px-4 py-3 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-          
+
           <option *ngFor="let round of Rounds" [value]="round.round_id">
             Round N°: {{round.name}}
               <p *ngIf="round.league_id==237">(Premier League)</p>
               <p *ngIf="round.league_id==538">(La Liga)</p>
           </option>
-        
+
         </select>
       </div>
 
-          
-          <!-- <select [(ngModel)]="LeagueId" name="LeagueId" (ngModelChange)="search(RoundId)" 
+
+          <!-- <select [(ngModel)]="LeagueId" name="LeagueId" (ngModelChange)="search(RoundId)"
           class="px-4 py-3 w-18 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-            
+
             <option *ngFor="let round of Rounds" [value]="round.round_id">
               League N°: {{round.name}}
                 <p *ngIf="round.league_id==237">(Premier League)</p>
                 <p *ngIf="round.league_id==538">(La Liga)</p>
             </option>
-          
+
           </select>
 
 
-          <select [(ngModel)]="RoundId" name="RoundId" (ngModelChange)="search(RoundId)" 
+          <select [(ngModel)]="RoundId" name="RoundId" (ngModelChange)="search(RoundId)"
           class="px-4 py-3 w-18 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-            
+
             <option *ngFor="let round of Rounds" [value]="round.round_id">
               Round N°: {{round.name}}
                 <p *ngIf="round.league_id==237">(Premier League)</p>
                 <p *ngIf="round.league_id==538">(La Liga)</p>
             </option>
-          
+
           </select> -->
 
 
@@ -49,8 +49,8 @@
 
   <div class="h-max h-96" >
       <div style="background: url('./assets/images/bg.svg') 100%;" class="betcardbg h-max bg-gradient-to-br grid grid-cols-4 justify-center text-black">
-        
-        <app-card  
+
+        <app-card
             class="font-semibold text-center rounded-3xl border shadow-lg p-10 max-w-xs"
             style="background: url('./assets/images/kora.jpg') ; "
 
@@ -64,6 +64,7 @@
             [awayscore]='match.stats?.away_score'
             [homescore_SC]='match.home_team?.short_code'
             [awayscore_SC]='match.away_team?.short_code'
+            [contractAddress]="match.contract_address"
           >
         </app-card>
 

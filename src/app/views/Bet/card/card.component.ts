@@ -1,4 +1,5 @@
 import { Component, OnInit ,Input} from '@angular/core';
+import { BettingService } from 'src/app/betting.service';
 import { Team } from 'src/app/models/Team';
 
 @Component({
@@ -20,14 +21,21 @@ export class CardComponent implements OnInit {
 
   @Input() homescore_SC?:string;
   @Input() awayscore_SC?:string;
+  @Input() contractAddress?:string;
 
 
-  constructor() { }
+  constructor(
+    public bettingService : BettingService
+  ) { }
 
   ngOnInit(): void {
     console.log(this.HomeTeam);
     console.log(this.AwayTeam);
 
+  }
+
+  betDraw(){
+    this.bettingService.draw();
   }
 
 }

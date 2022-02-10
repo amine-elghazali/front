@@ -1,6 +1,6 @@
 <div class="betcard blockcursor-pointer text-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-  
-  
+
+
   <div class="grid grid-cols-2 mt-2 gap-x-6 gap-y-6">
 
     <div class="grid grid-rows-3 gap-y-6">
@@ -15,7 +15,7 @@
       <span  class="font-extrabold">{{homescore}}</span>
 
       <span  class="font-extrabold">-220</span>
-      
+
     </div>
 
 
@@ -38,13 +38,13 @@
   </div>
 
 
-  
+
   <div class="grid grid-cols-3">
-    <app-place-bet [teamName]='homescore_SC' ></app-place-bet>
+    <app-place-bet [teamName]='homescore_SC' [isLocal]="true" [contractAddress]="contractAddress" ></app-place-bet>
     <div class="cursor-pointer grid grid-cols-1 content-around block p-6 w-20 h-6 bg-white-100 rounded-lg border border-gray-200 shadow-md hover:bg-purple-800 dark:bg-gray-800 dark:border-purple-500 dark:hover:bg-purple-500">
-      <div class="text-center font-extrabold text-white">DRAW</div>
+      <app-place-bet [contractAddress]="contractAddress" [isDraw]="true" class="text-center font-extrabold text-white">DRAW</app-place-bet>
     </div>
-    <app-place-bet [teamName]='awayscore_SC'></app-place-bet>
+    <app-place-bet [teamName]='awayscore_SC' [isLocal]="false" [contractAddress]="contractAddress"></app-place-bet>
   </div>
 
 
